@@ -1,0 +1,10 @@
+uuid: 2b182ff3-4d49-4e65-abb4-bac9061b1a28
+langcode: pt-pt
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7klS5IWXrwzVaPpYZFAs6wcx8U2FF1X73OfrtTsvuvE
+id: fallback
+label: 'Formato de data de recurso'
+locked: true
+pattern: 'D, m/d/Y - H:i'

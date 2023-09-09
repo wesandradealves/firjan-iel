@@ -1,0 +1,13 @@
+uuid: 759ef908-673b-4d32-9485-69756c4317b1
+langcode: pt-pt
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: DyypzTfThX10FFQw-399qPfEbLLyrhXgQrKPVsmAoJ4
+id: user_block_user_action
+label: 'Bloquear o(s) utilizador(es) selecionado(s)'
+type: user
+plugin: user_block_user_action
+configuration: {  }

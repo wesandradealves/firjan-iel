@@ -1,0 +1,21 @@
+uuid: d937286b-2a8c-435a-9ec3-b5168e10ff90
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+    - field.storage.block_content.field_lead_mensagem
+  module:
+    - text
+id: block_content.lead.field_lead_mensagem
+field_name: field_lead_mensagem
+entity_type: block_content
+bundle: lead
+label: 'Mensagem de Confirmação'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

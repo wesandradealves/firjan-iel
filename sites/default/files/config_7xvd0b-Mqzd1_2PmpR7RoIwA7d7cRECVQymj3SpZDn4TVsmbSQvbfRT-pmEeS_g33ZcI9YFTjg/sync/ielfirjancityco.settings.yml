@@ -1,0 +1,75 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://logo-w.png'
+favicon:
+  use_default: 1
+bootstrap_barrio_source: '0'
+bootstrap_barrio_container: container
+bootstrap_barrio_region_clean_header: 1
+bootstrap_barrio_region_class_header: ''
+bootstrap_barrio_region_clean_content: 1
+bootstrap_barrio_region_class_content: ''
+bootstrap_barrio_region_clean_footer: 0
+bootstrap_barrio_region_class_footer: row
+bootstrap_barrio_sidebar_position: left
+bootstrap_barrio_content_offset: '0'
+bootstrap_barrio_sidebar_collapse: 0
+bootstrap_barrio_sidebar_first_width: '2'
+bootstrap_barrio_sidebar_first_offset: '0'
+bootstrap_barrio_sidebar_second_width: '2'
+bootstrap_barrio_sidebar_second_offset: '0'
+bootstrap_barrio_hide_node_label: 0
+bootstrap_barrio_breadcrumb_divider: ''
+bootstrap_barrio_button: 0
+bootstrap_barrio_button_type: primary
+bootstrap_barrio_button_size: ''
+bootstrap_barrio_button_outline: 0
+bootstrap_barrio_image_fluid: 0
+bootstrap_barrio_navbar_container: 0
+bootstrap_barrio_navbar_toggle: navbar-toggleable-xl
+bootstrap_barrio_navbar_top_navbar: 0
+bootstrap_barrio_navbar_top_position: ''
+bootstrap_barrio_navbar_top_color: ''
+bootstrap_barrio_navbar_top_background: ''
+bootstrap_barrio_navbar_position: ''
+bootstrap_barrio_navbar_color: ''
+bootstrap_barrio_navbar_background: ''
+bootstrap_barrio_navbar_top_class: ''
+bootstrap_barrio_navbar_class: ''
+bootstrap_barrio_navbar_offcanvas: ''
+bootstrap_barrio_navbar_flyout: 0
+bootstrap_barrio_navbar_slide: 0
+bootstrap_barrio_tabs_style: ''
+bootstrap_barrio_messages_widget: default
+bootstrap_barrio_float_label: 0
+bootstrap_barrio_checkbox: ''
+bootstrap_barrio_navbar_top_affix: 0
+bootstrap_barrio_navbar_affix: 0
+bootstrap_barrio_sidebar_first_affix: 0
+bootstrap_barrio_sidebar_second_affix: 0
+bootstrap_barrio_scroll_spy: ''
+bootstrap_barrio_google_fonts: ''
+bootstrap_barrio_bootstrap_icons: 0
+bootstrap_barrio_icons: ''
+bootstrap_barrio_system_messages: ''
+bootstrap_barrio_table_style: ''
+bootstrap_barrio_table_hover: 0
+bootstrap_barrio_table_head: ''
+horarios: "Fale com a Firjan IEL<br>\r\nSegunda à sexta-feira, de 9h às 18h<br>\r\n<a href=\"tel:40020231\">4002 0231</a> (Custo de Ligação local)\r\n"
+contatos: "<a href=\"tel:08000231231\">0800 0231 231</a> (Ligações gratuítas de telefone fixo no estado do Rio)<br>\r\nEmail: <a title=\"faleconosco@firjan.com.br\" href=\"mailto:faleconosco@firjan.com.br\">faleconosco@firjan.com.br</a>"
+termos:
+  - '26'
+new_logo:
+  - '24'
+background:
+  - '25'
+descricao: 'Firjan IEL é a equivalente fluminense do Instituto Euvaldo Lodi (IEL) nacional, que foi criado pela Confederação Nacional da Indústria (CNI) em conjunto com o Serviço Social da Indústria (SESI) e o Serviço Nacional de Aprendizagem Industrial (SENAI), em 1969.'
+scripts: "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-5PLPMRM');</script>"
+thumbnail:
+  - '27'
+form_confirm: 'Mensagem aqui'

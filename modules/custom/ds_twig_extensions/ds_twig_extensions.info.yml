@@ -1,0 +1,11 @@
+name: 'Twig Extensions'
+description: 'Custom functions for twig'
+package: City Connect
+core_version_requirement: ^8 || ^9
+type: module
+
+# Information added by Drupal.org packaging script on 2021-08-29
+version: '1.0'
+datestamp: 1630242476
+dependencies:
+  - ds_twig_extensions:ds_twig_extensions

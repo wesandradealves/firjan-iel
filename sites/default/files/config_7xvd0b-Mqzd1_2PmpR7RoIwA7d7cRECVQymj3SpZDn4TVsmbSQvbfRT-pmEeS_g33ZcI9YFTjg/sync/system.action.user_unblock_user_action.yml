@@ -1,0 +1,13 @@
+uuid: aad2feec-da11-474c-87f5-54c5e6870d99
+langcode: pt-pt
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: SPsUXsR3Rc8d1y3gewzaAKWa1ncea_ywXX3f7LTn7k0
+id: user_unblock_user_action
+label: 'Desbloquear o(s) utilizador(es) selecionado(s)'
+type: user
+plugin: user_unblock_user_action
+configuration: {  }

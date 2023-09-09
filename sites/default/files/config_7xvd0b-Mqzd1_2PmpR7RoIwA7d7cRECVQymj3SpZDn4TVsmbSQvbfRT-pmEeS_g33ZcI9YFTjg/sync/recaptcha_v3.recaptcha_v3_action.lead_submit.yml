@@ -1,0 +1,8 @@
+uuid: 748b26ca-b93b-49ac-96bf-d7b33e07e22a
+langcode: pt-br
+status: true
+dependencies: {  }
+id: lead_submit
+label: 'Lead Submit'
+threshold: 0.5
+challenge: recaptcha/reCAPTCHA

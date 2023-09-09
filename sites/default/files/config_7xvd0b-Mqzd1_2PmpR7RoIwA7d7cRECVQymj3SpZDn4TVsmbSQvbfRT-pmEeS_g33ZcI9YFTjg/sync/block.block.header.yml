@@ -1,0 +1,35 @@
+uuid: 8137f076-2713-4925-b0da-083c94d0f482
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d7f05108-f9ff-437e-94a1-4d5652266fb5'
+  module:
+    - blocache
+    - block_content
+  theme:
+    - ielfirjancityco
+third_party_settings:
+  blocache:
+    overridden: true
+    metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_interface'
+      tags:
+        - 'config:block.block.header'
+id: header
+theme: ielfirjancityco
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:d7f05108-f9ff-437e-94a1-4d5652266fb5'
+settings:
+  id: 'block_content:d7f05108-f9ff-437e-94a1-4d5652266fb5'
+  label: Header
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

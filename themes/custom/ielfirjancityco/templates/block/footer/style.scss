@@ -1,0 +1,35 @@
+.footer {
+    .logo {
+        height: 50px;
+    }
+    &-top {
+        background-color: color(gray, base);
+        color: white;
+        a {
+            color: inherit;
+            &:hover {
+                text-decoration: underline;
+            }
+        }        
+        .container {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+    }
+    &-bottom {
+        @include toRem(font-size, 14);
+        background-color: white;
+        color: color(gray, base);
+        .container {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        a {
+            color: inherit;
+            font-weight: bold;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }    
+}

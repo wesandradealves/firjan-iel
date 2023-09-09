@@ -1,0 +1,10 @@
+.login {
+    @extend .block--lead;
+    .form {
+        max-width: 414px;
+        margin: 0 auto !important;
+        .form-item {
+            margin-bottom: 15px;
+        }
+    }
+}

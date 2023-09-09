@@ -1,0 +1,22 @@
+.page-view-lead {
+    .header {
+        .container {
+            padding-top: 30px;
+        }
+    }
+    .main {
+        padding-bottom: 0;
+        background-color: white;
+        .view-lead {
+            &-export {
+                padding: 10px 10px 0;
+                color: black;
+                font-weight: bold;
+                text-align: center;  
+                &:hover {
+                    color: color(primary, base);
+                }          
+            }
+        }
+    }
+}

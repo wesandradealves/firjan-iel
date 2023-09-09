@@ -1,0 +1,25 @@
+<footer class="footer d-block col-12">
+    <div class="footer-top">
+        <div class="container d-flex flex-column flex-xl-row align-items-start justify-content-start">
+            {% if horarios %}
+                <div class="col-auto pe-xl-5">
+                    <p>{{ horarios|raw }}</p>
+                </div>
+            {% endif %}
+            {% if contatos %}
+                <div class="mt-4 mt-xl-0 col-auto col-xl-4 ps-xl-5 pe-xl-5 ms-xl-auto me-xl-auto">
+                    <p>{{ contatos|raw }}</p>
+                </div>
+            {% endif %}
+            {% include directory ~ '/templates/partials/logo.html.twig' with {
+                url: logo ? logo : null,
+                classes: 'mt-4 mt-xl-0 ms-xl-auto ps-xl-5'
+            } %}  
+        </div> 
+    </div>
+    <div class="footer-bottom">
+        <div class="container d-flex flex-wrap">
+            <p>@copyright {{ 'now' | date('Y') }} - Todos os direitos reservados à <a href="https://www.firjan.com.br" target="_blank" title="Firjan">Firjan</a></p>
+        </div> 
+    </div>
+</footer>

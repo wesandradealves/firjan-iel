@@ -1,0 +1,25 @@
+uuid: 0a0224ae-9efc-4968-b038-aba1519f6ed5
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5d1cc4a8-691a-4353-9efc-d9bd8120b8b0'
+  module:
+    - block_content
+  theme:
+    - ielfirjancityco
+id: footer
+theme: ielfirjancityco
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:5d1cc4a8-691a-4353-9efc-d9bd8120b8b0'
+settings:
+  id: 'block_content:5d1cc4a8-691a-4353-9efc-d9bd8120b8b0'
+  label: Footer
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

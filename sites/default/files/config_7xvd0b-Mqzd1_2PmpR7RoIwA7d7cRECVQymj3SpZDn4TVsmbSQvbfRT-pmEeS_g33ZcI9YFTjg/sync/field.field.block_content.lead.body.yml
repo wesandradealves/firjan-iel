@@ -1,0 +1,23 @@
+uuid: 460944b2-7401-4853-ae7a-5c76b0ad5c95
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.lead.body
+field_name: body
+entity_type: block_content
+bundle: lead
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

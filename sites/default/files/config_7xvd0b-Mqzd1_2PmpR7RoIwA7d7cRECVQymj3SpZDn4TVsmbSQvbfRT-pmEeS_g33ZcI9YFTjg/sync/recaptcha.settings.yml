@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: ByOVf1cU9r5NkZ4ieBJ7k9sUid6jb03ojMN1gjJ0-OU
+langcode: pt-br
+site_key: 6LeebdsmAAAAAODNsTfAh3JLTvKLdunFQ4ZXpaHE
+secret_key: 6LeebdsmAAAAANiFCgJ_1Z_3cQ8xkH8ETibTCWg0
+verify_hostname: true
+use_globally: true
+widget:
+  theme: dark
+  type: image
+  size: ''
+  noscript: true

@@ -1,0 +1,22 @@
+uuid: f0927b55-9742-4b0b-9217-b6f3460e8537
+langcode: pt-pt
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ielfirjancityco
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: ielfirjancityco_content
+theme: ielfirjancityco
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Conteúdo da página principal'
+  label_display: '0'
+  provider: system
+visibility: {  }

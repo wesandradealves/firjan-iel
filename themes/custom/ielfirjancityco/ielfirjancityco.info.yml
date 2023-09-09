@@ -1,0 +1,23 @@
+name: Firjan IEL
+type: theme
+description: 'Firjan IEL é a equivalente fluminense do Instituto Euvaldo Lodi (IEL) nacional, que foi criado pela Confederação Nacional da Indústria (CNI) em conjunto com o Serviço Social da Indústria (SESI) e o Serviço Nacional de Aprendizagem Industrial (SENAI), em 1969.
+A função básica da Firjan IEL é unir universidades e instituições de pesquisa com a indústria. Dentre suas funções, desenvolve programas de empreendedorismo a fim de promover a criação de novas lideranças e a adoção, no currículo universitário, de disciplinas voltadas para a ação empreendedora.
+Além disso, estimula programas e projetos inovadores, bem como a gestão da inovação e da tecnologia, inserindo produtos tecnológicos e intelectuais de instituições de ensino nas empresas, o que gera mais competitividade industrial.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap_barrio
+
+libraries:
+  - ielfirjancityco/bootstrap
+  - ielfirjancityco/global-styling
+  - ielfirjancityco/toastr
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+
+components:
+  namespaces:
+    partials:
+      - templates/partials

@@ -1,0 +1,194 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+use Drupal\block\Entity\Block;
+
+require_once 'settings.inc';
+require_once 'templates/block/lead/block--lead.inc';
+require_once 'templates/block/footer/block--footer.inc';
+require_once 'templates/block/header/block--header.inc';
+require_once 'templates/page/login/page--user--login.inc';
+require_once 'templates/page/front/page--front.inc';
+
+function slugify($text, string $divider = "-")
+{
+    // replace non letter or digits by divider
+    $text = preg_replace("~[^\pL\d]+~u", $divider, $text);
+
+    // transliterate
+    $text = iconv("utf-8", "us-ascii//TRANSLIT", $text);
+
+    // remove unwanted characters
+    $text = preg_replace("~[^-\w]+~", "", $text);
+
+    // trim
+    $text = trim($text, $divider);
+
+    // remove duplicate divider
+    $text = preg_replace("~-+~", $divider, $text);
+
+    // lowercase
+    $text = strtolower($text);
+
+    if (empty($text)) {
+        return "n-a";
+    }
+
+    return $text;
+}
+
+function ielfirjancityco_theme_suggestions_node_alter(
+    array &$suggestions,
+    array $variables
+) {
+    $node = \Drupal::routeMatch()->getParameter("node");
+    if ($node) {
+        $content_type = $node->bundle();
+        $suggestions[] =
+            "node__" . $content_type . "__" . slugify($node->title->value);
+    }
+}
+
+function ielfirjancityco_suggestions_block_alter(array &$suggestions, array $variables) 
+{
+    $block = $variables['elements'];
+    $blockType = $block['#configuration']['provider'];
+    if ($blockType == "block_content") {
+      $bundle = $block['content']['#block_content']->bundle();
+      array_splice($suggestions, 2, 0, 'block__' . $bundle);
+    }
+}
+
+function ielfirjancityco_theme_suggestions_page_alter(
+    array &$suggestions,
+    array $variables
+) {
+    $node = \Drupal::routeMatch()->getParameter("node");
+    if ($node) {
+        $suggestions[] = "page__" . slugify($node->title->value);
+    }
+}
+
+function ielfirjancityco_theme_suggestions_views_view_alter(
+    array &$suggestions,
+    array $variables
+) {
+    $node = \Drupal::routeMatch()->getParameter("node");
+    if ($node) {
+        $content_type = $node->bundle();
+        $suggestions[] = "views_view__" . $content_type;
+        $suggestions[] = "views_view__" . slugify($node->title->value);
+    }
+}
+
+function ielfirjancityco_theme_suggestions_views_view_unformatted_alter(
+    array &$suggestions,
+    array $variables
+) {
+    $node = \Drupal::routeMatch()->getParameter("node");
+    if ($node) {
+        $content_type = $node->bundle();
+        $suggestions[] = "views_view_unformatted__" . $content_type;
+        $suggestions[] =
+            "views_view_unformatted__" . slugify($node->title->value);
+    }
+}
+
+function ielfirjancityco_theme_suggestions_views_view_field_alter(
+    array &$suggestions,
+    array &$variables,
+    $hook
+) {
+    if ($variables["view"]->id() && $variables["view"]->current_display) {
+        $suggestions[] =
+            $hook .
+            "__" .
+            $variables["view"]->id() .
+            "__" .
+            $variables["view"]->current_display .
+            "__" .
+            $variables["field"]->field;
+    }
+}
+
+function ielfirjancityco_theme_suggestions_menu_alter(
+    array &$suggestions,
+    array $variables
+) {
+    if (isset($variables["attributes"]["block"])) {
+        $hook = str_replace(
+            ["block-", "-"],
+            ["", "_"],
+            $variables["attributes"]["block"]
+        );
+        $suggestions[] = $variables["theme_hook_original"] . "__" . $hook;
+    }
+}
+
+function ielfirjancityco_preprocess_html(&$variables) {
+    $variables['scripts'] = theme_get_setting('scripts');
+    $variables['descricao'] = theme_get_setting('descricao');
+
+    if(theme_get_setting('background')) {
+        $fid = theme_get_setting('background')[0];
+        if($fid) {
+            $file = \Drupal\file\Entity\File::load($fid);
+            if($file) {
+                $variables['background'] = file_create_url($file->getFileUri());
+            }
+        }        
+    }  
+
+    if(theme_get_setting('thumbnail')) {
+        $fid = theme_get_setting('thumbnail')[0];
+        if($fid) {
+            $file = \Drupal\file\Entity\File::load($fid);
+            if($file) {
+                $variables['thumbnail'] = file_create_url($file->getFileUri());
+            }
+        }        
+    }      
+
+    if(theme_get_setting('new_logo')) {
+        $fid = theme_get_setting('new_logo')[0];
+        if($fid) {
+            $file = \Drupal\file\Entity\File::load($fid);
+            if($file) {
+                $variables['logo'] = file_create_url($file->getFileUri());
+            }
+        }        
+    }  
+}
+
+function ielfirjancityco_preprocess_page(&$variables) {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage(); 
+}
+
+function ielfirjancityco_preprocess_block(&$variables) {
+    $variables['configuration'] = $variables['elements']['#configuration'];
+    $variables['block_title'] = $variables['configuration']['label'];
+}
+
+function ielfirjancityco_preprocess_block_content(&$variables) {
+    $entity = $variables['elements']['#block_content'];
+
+    $blocks = Block::loadMultiple();
+
+    foreach ($blocks as $key => $block) {
+      $uuid = $block->getPlugin()->getDerivativeId();
+  
+      if($uuid) {
+        $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+  
+        if($block_content == $entity) {
+          $settings = $block->get('settings');
+          $variables['label_display'] = $settings['label_display'];
+          $variables['label'] = $settings['label'];
+        }
+      }
+    }    
+} 
+

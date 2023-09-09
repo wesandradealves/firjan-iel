@@ -1,0 +1,74 @@
+@keyframes opacity {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    } 
+}
+
+html, body {
+    @include toRem(font-size, 16);
+    min-width: 375px;
+    animation: opacity 600ms forwards;
+    font-weight: 500;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    line-height: 1.8;
+    background-color: white;
+    * {
+        &:not([class*="fa"]) {
+            font-family: inherit;
+        }
+    }
+    p {
+        strong, b {
+            font-weight: bold;
+        }
+        word-break: break-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        * {
+            word-break: inherit;
+            word-wrap: inherit;
+            overflow-wrap: inherit;
+        }    
+    }
+
+    @for $i from 1 through 3 {
+        h#{$i} {
+            font-weight: bold;
+            word-break: break-word;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    }   
+}
+
+.text {
+    @for $i from 1 through 3 {
+        h#{$i} {
+            &:not(:only-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    } 
+    p {
+        &:not(:only-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.main {
+    padding-bottom: 70px;
+}
+
+#wrap {
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+}

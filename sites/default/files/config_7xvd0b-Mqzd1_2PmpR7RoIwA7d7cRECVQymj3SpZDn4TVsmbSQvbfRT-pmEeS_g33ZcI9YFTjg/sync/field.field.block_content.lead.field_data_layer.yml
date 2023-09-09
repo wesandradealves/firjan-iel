@@ -1,0 +1,19 @@
+uuid: 7b724c42-e20f-469d-abd6-6697bfa6bee4
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+    - field.storage.block_content.field_data_layer
+id: block_content.lead.field_data_layer
+field_name: field_data_layer
+entity_type: block_content
+bundle: lead
+label: 'Data Layer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

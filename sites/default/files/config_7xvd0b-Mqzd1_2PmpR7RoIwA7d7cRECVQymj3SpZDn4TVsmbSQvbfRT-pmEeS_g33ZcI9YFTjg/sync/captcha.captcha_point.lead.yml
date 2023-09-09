@@ -1,0 +1,7 @@
+uuid: 626a4cd0-12c4-45f6-86d7-021374f3c1a1
+langcode: pt-br
+status: true
+dependencies: {  }
+formId: lead
+captchaType: recaptcha_v3/lead_submit
+label: Lead

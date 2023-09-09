@@ -1,0 +1,7 @@
+<a href="{{ url('<front>') }}" title="{{ site.name }}">
+    {% if logo %}
+        <img class="d-block img-fluid logo {{classes}}" loading="lazy" alt="{{site.name}}" src="{{ logo }}" />
+    {% else %}
+        {{ site.name }}
+    {% endif %}
+</a>

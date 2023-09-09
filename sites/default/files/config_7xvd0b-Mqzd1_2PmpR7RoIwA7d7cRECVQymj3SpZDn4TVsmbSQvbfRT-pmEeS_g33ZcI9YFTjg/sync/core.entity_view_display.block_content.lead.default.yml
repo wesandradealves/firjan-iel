@@ -1,0 +1,55 @@
+uuid: 32a0c9b2-e453-4ebf-b349-2516d89d3bbe
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+    - field.field.block_content.lead.body
+    - field.field.block_content.lead.field_body
+    - field.field.block_content.lead.field_data_layer
+    - field.field.block_content.lead.field_formulario
+    - field.field.block_content.lead.field_lead_mensagem
+  module:
+    - text
+id: block_content.lead.default
+targetEntityType: block_content
+bundle: lead
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_data_layer:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_formulario:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_lead_mensagem:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true

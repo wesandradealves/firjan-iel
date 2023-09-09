@@ -1,0 +1,12 @@
+uuid: 9ebd24ab-443f-4fbb-aa3f-4aa27f51535f
+langcode: pt-pt
+status: false
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: mQIF_foYjmnVSr9MpcD4CTaJE_FpO1AyDd_DskztGhM
+id: user.full
+label: 'Conta de utilizador'
+targetEntityType: user
+cache: true

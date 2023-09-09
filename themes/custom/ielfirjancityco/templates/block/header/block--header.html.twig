@@ -1,0 +1,8 @@
+<header class="header d-block col-12">
+    <div class="container">
+        {% include directory ~ '/templates/partials/logo.html.twig' with {
+            url: logo ? logo : null,
+            classes: is_system or is_login or exception or is_profile or lead ? 'm-auto' : 'me-auto'
+        } %}        
+    </div>
+</header>

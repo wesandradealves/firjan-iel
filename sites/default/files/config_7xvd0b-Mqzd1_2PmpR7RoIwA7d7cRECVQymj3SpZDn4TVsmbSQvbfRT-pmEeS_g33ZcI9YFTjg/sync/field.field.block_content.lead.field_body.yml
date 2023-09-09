@@ -1,0 +1,21 @@
+uuid: b3a84a6e-6956-429b-af0e-2a6b9681ccc7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+    - field.storage.block_content.field_body
+  module:
+    - text
+id: block_content.lead.field_body
+field_name: field_body
+entity_type: block_content
+bundle: lead
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

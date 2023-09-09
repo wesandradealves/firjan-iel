@@ -1,0 +1,8 @@
+uuid: e86d677a-0fc3-4ace-81f3-540b9855d611
+langcode: pt-br
+status: true
+dependencies: {  }
+id: lead
+label: Lead
+revision: 0
+description: 'Lead block'

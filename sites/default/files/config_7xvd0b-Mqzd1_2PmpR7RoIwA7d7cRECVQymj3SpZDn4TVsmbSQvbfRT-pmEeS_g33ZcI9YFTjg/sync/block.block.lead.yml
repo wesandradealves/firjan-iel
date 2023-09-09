@@ -1,0 +1,30 @@
+uuid: 7d7d2c97-b624-4c1d-b68b-2acdd25fdd1b
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:lead:d5366efd-ac87-4e6c-84b3-e7151b11b72d'
+  module:
+    - block_content
+    - system
+  theme:
+    - ielfirjancityco
+id: lead
+theme: ielfirjancityco
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:d5366efd-ac87-4e6c-84b3-e7151b11b72d'
+settings:
+  id: 'block_content:d5366efd-ac87-4e6c-84b3-e7151b11b72d'
+  label: 'Acelere o crescimento da sua empresa com a Firjan IEL'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

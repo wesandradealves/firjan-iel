@@ -1,0 +1,27 @@
+<?php 
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+use Drupal\Core\Database\Query;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File; 
+use Drupal\core\Url; 
+use \Drupal\block\Entity\Block;
+use Drupal\taxonomy\Entity\Term;      
+use Drupal\Core\Link;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Entity\EntityBase;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\Request;
+use \Drupal\user\Entity\User;
+use Cocur\Slugify\Slugify;
+
+function ds_twig_extensions_preprocess_page(&$variables) {
+    $variables['#attached']['library'][] = 'ds_twig_extensions/admin';
+ }

@@ -1,0 +1,19 @@
+uuid: 5d98f67e-26cf-42ef-96b2-89a5ff232d75
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_lead_mensagem
+field_name: field_lead_mensagem
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

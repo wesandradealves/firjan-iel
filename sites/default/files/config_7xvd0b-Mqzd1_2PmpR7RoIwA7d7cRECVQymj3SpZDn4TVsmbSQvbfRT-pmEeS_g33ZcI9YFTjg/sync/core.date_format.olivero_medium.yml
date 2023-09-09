@@ -1,0 +1,13 @@
+uuid: f0412fb3-a3a6-4df5-9bda-2065787a0857
+langcode: pt-pt
+status: true
+dependencies:
+  enforced:
+    theme:
+      - olivero
+_core:
+  default_config_hash: Mt6cmxUbDZ9XxD6p25WQ8tj3_JcX8ylfcddwZc8gcAE
+id: olivero_medium
+label: 'Olivero Médio'
+locked: false
+pattern: "j  F,  Y\r\nem contexto: PHP formato de data"

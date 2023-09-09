@@ -1,0 +1,48 @@
+.btn {
+    border-radius: 0;
+    padding: 10px 20px;
+    @include toRem(font-size, 16); 
+    @include toRem(letter-spacing, 1);
+    font-weight: bold;
+    transition: 150ms ease-in-out all;
+    &.primary {
+        background: color(secondary, base);
+        color: color(primary, base);
+        &:hover {
+            color: color(secondary, base);
+            background: color(primary, base);
+        }
+    }
+}
+
+.button--primary {
+    @extend .btn;
+    @extend .primary;
+}
+
+.alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: color(primary, dark);
+    color: color(secondary, base);
+    @include toRem(font-size, 14);
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    * {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;        
+    }
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}

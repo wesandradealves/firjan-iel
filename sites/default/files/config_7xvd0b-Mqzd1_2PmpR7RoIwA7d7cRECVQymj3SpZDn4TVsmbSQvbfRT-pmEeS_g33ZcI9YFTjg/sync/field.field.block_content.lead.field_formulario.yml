@@ -1,0 +1,21 @@
+uuid: 3a13d8e7-8612-4b44-bf7d-c5baa107d557
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+    - field.storage.block_content.field_formulario
+id: block_content.lead.field_formulario
+field_name: field_formulario
+entity_type: block_content
+bundle: lead
+label: Formulário
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings: {  }
+field_type: entity_reference

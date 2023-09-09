@@ -1,0 +1,11 @@
+uuid: a37647ba-dd19-4355-b21f-ca47616c0d83
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.lead
+id: block_content.lead
+target_entity_type_id: block_content
+target_bundle: lead
+default_langcode: site_default
+language_alterable: false
